@@ -1,0 +1,5 @@
+
+// --- Todo for litterbox ---
+-Make TileManager scrolling offsets apply only to maps used
+-Add function to toggle scrolling behavior 
+-Add macro for BG scrolling selection REG_BG_HOFS(n) instead of REG_BG0_HOFS
