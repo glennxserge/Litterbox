@@ -5,3 +5,4 @@ docs/*
 
 ## Local builds
 build/*
+lib/*
