@@ -2,5 +2,6 @@
 -Make TileManager scrolling offsets apply only to maps used
 -Add function to toggle scrolling behavior 
 -DONE Add macro for BG scrolling selection REG_BG_HOFS(n) instead of REG_BG0_HOFS
--Add input manager. 
+-DONE Add input manager. 
+-Remove InputContext array multiplies, use 2d arrays instead
 -Add multi-dimension sprites 
