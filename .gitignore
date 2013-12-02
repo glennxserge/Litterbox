@@ -1,0 +1,7 @@
+## Doxygen components
+docs/*
+*.chm
+*.dox
+
+## Local builds
+build/*
