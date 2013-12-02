@@ -42,6 +42,12 @@
 #define WIN1_ALL (0x3F << 8)
 //\}
 
+//! \name Input macros
+//\{
+#define MAX_BUTTON_STATES 	42		//!< Total number of held, pressed, and released states for all 14 DS inputs
+#define MAX_BUTTONS 		14		//!< Total number of DS input buttons (including lid state and touch pad)
+//\}
+
 /*! \enum ScreenEnum
  * Enumeration for identifying screen
  */

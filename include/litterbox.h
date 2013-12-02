@@ -13,6 +13,7 @@
 #include <litterbox/SpriteManager.h>
 #include <litterbox/TextSystem.h>
 #include <litterbox/Coroutine.h>
+#include <litterbox/InputManager.h>
 
 /*! \defgroup grpTileManager TileManager
  *  \brief TileManager organizes tile data and simplifies loading
@@ -35,10 +36,16 @@
  *  where to yield, and where to end the coroutine.  It is based on Duff's Device.
  */
  
- /*! \defgroup grpSpriteManager SpriteManager
+/*! \defgroup grpSpriteManager SpriteManager
  *  \brief Manages all the sprites allocation and display details
  *  \note Adjusts sprite draw priority by sorting height, allocates OAM index, attaches tile and palette data,
  *  and copies data to hardware.
+ */
+ 
+/*! \defgroup grpInputManager InputManager
+ *  \brief Polls inputs on DS and executes mapped functions
+ *  \note Monitors the state of all buttons on the DS, given pressed, held, and released.  The InputManager is given an InputContext 
+ *  that maps each button and state to a dispatching function, allowing multiple contexts to define responses to input.
  */
  
 /*! \mainpage	Litterbox 1.0
