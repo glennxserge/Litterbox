@@ -47,7 +47,7 @@ enum BUTTON_IDS {
 class InputContext {
 private:
 
-	Event ButtonEvents[MAX_BUTTON_STATES];		//!< Array containing the event function pointers for button responses, mappable via SetButtonEvent
+	Event ButtonEvents[BUTTON_STATES][MAX_BUTTONS];		//!< Array containing the event function pointers for button responses, mappable via SetButtonEvent
 
 public:
 	//! Constructor points all button events to an empty function

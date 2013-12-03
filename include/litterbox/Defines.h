@@ -44,7 +44,7 @@
 
 //! \name Input macros
 //\{
-#define MAX_BUTTON_STATES 	42		//!< Total number of held, pressed, and released states for all 14 DS inputs
+#define BUTTON_STATES 		3		//!< Total number of states: held, pressed, and released
 #define MAX_BUTTONS 		14		//!< Total number of DS input buttons (including lid state and touch pad)
 //\}
 

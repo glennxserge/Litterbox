@@ -6,18 +6,20 @@
 
 InputContext::InputContext() {
 	//Set all button events to do nothing
-	int i;
-	for(i = 0; i < MAX_BUTTON_STATES; i++) {
-		ButtonEvents[i].function_pointer = do_nothing;
+	int i, j;
+	for(i = 0; i < BUTTON_STATES; i++) {
+		for(j = 0; j < MAX_BUTTONS; j++) {
+			ButtonEvents[i][j].function_pointer = do_nothing;
+		}
 	}
 }
 
 void InputContext::SetButtonEvent(int state, int button, void (*pt2Func)(void)) {
-	ButtonEvents[MAX_BUTTONS*state+button].function_pointer = pt2Func;
+	ButtonEvents[state][button].function_pointer = pt2Func;
 }
 
 void InputContext::ExecuteEvent(int state, int button) {
-	ButtonEvents[MAX_BUTTONS*state+button].function_pointer();
+	ButtonEvents[state][button].function_pointer();
 }
 
 // ----------------------------------------- //
