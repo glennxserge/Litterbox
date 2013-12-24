@@ -79,6 +79,7 @@ void SpriteManager::DeleteSprite(Sprite *_pSp) {
 	if( SpList.PaletteInstances(_pSp) == 1 ) {
 		FreePaletteSlot(_pSp->palette_num);
 		PaletteCount--;
+		OamCount--;
 	}
 	if( SpList.IsSpriteInList(_pSp) ) {
 		FreeOamSlot(_pSp->sprite_oam_index);

@@ -125,7 +125,6 @@ void SpriteList::SortByY() {
 	
 	
 	int i = 0;
-	consoleClear();
 	while( root->next->next != bubbleEnd )
 	{		
 		//If node A.y is greater than B.y, swap them so that the draw order makes sense
