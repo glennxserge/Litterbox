@@ -56,6 +56,13 @@ enum ScreenEnum {
 	SUB			//!< 1, Sub(touch) screen
 };
 
+/*! name Memory
+ * Section mapping for memory
+ */
+//\{
+#define EWRAM_DATA 	__attribute__((section (".ewram")))
+//\}
+
 //! \name Math
 //\{
 #define ABS(n)	(((n) < 0) ? -(n) : (n))
