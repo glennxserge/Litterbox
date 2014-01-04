@@ -14,6 +14,7 @@
 #include <litterbox/TextSystem.h>
 #include <litterbox/Coroutine.h>
 #include <litterbox/InputManager.h>
+#include <litterbox/Vec2d.h>
 
 /*! \defgroup grpTileManager TileManager
  *  \brief TileManager organizes tile data and simplifies loading

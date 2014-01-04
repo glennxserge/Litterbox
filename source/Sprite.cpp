@@ -7,8 +7,7 @@
 
 Sprite::Sprite()
 {
-	x = 0; 
-	y = 0; 
+	pos = Vec2d(0,0);
 	gfx_t = 0;
 	palette_num = 0;
 	current_frame = 0;
@@ -19,10 +18,9 @@ Sprite::Sprite()
 	priority = 2;
 }
 
-Sprite::Sprite(int _x, int _y, int _start_frame, int _end_frame, int* _delay, graphic_t* gfx)
+Sprite::Sprite(Vec2d _p, int _start_frame, int _end_frame, int* _delay, graphic_t* gfx)
 {
-	x = _x; 
-	y = _y;
+	pos = _p;
 	gfx_t = gfx;
 	palette_num = 0;
 	current_frame = _start_frame;
@@ -34,10 +32,9 @@ Sprite::Sprite(int _x, int _y, int _start_frame, int _end_frame, int* _delay, gr
 	hidden = false;
 }
 
-void Sprite::SetupSprite(int _x, int _y, int _current_frame, int* _delay, int _palette_num)
+void Sprite::SetupSprite(Vec2d _p, int _current_frame, int* _delay, int _palette_num)
 {
-	x = _x; 
-	y = _y; 
+	pos = _p;
 	palette_num = _palette_num;
 	current_frame = _current_frame;
 	sub_frames = 0;
@@ -74,7 +71,7 @@ void Sprite::SetFrame(int frame)
 
 void Sprite::PutSpriteOam()
 {
-	oamSet(_oam, sprite_oam_index, x, y, priority, palette_num, SpriteSize_16x16, SpriteColorFormat_256Color, 
+	oamSet(_oam, sprite_oam_index, pos.x, pos.y, priority, palette_num, SpriteSize_16x16, SpriteColorFormat_256Color, 
 		sprite_gfx_mem, -1, false, hidden, false, false, false);
 }
 
